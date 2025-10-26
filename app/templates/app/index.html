@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Главная — Магазин{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="page-title">Каталог товаров</h1>
+
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-image-wrap">
+                <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-image">
+            </div>
+            <div class="product-details">
+                <h2 class="product-name">{{ product.name }}</h2>
+                <p class="product-category">{{ product.brand.name }} / {{ product.category.name }}</p>
+                <div class="product-price-block">
+                    <span class="product-price">{{ product.price }} ₽</span>
+                    {% if product.old_price %}
+                    <span class="product-old-price">{{ product.old_price }} ₽</span>
+                    {% endif %}
+                </div>
+                <button class="add-to-cart">В корзину</button>
+            </div>
+        </div>
+        {% empty %}
+        <p class="no-products">Пока нет товаров 😢</p>
+        {% endfor %}
+    </div>
+
+  
+    </div>
+</div>
+{% endblock %}
