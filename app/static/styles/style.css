@@ -1,9 +1,9 @@
-/* === Базовые стили === */
+
 body {
     font-family: "Inter", "Segoe UI", sans-serif;
-    background-color: #f6f6f8;
+    background-color: white;
     margin: 0;
-    color: #222;
+    color: black;
 }
 
 .container {
@@ -17,17 +17,15 @@ body {
     font-weight: 600;
     margin-bottom: 25px;
     text-align: center;
-    color: #2b2b2b;
+    color: black;
 }
 
-/* === Сетка товаров === */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 24px;
 }
 
-/* === Карточка товара === */
 .product-card {
     background: #fff;
     border-radius: 14px;
@@ -45,7 +43,6 @@ body {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
-/* === Фото === */
 .product-image-wrap {
     width: 100%;
     aspect-ratio: 1/1;
@@ -64,7 +61,6 @@ body {
     transform: scale(1.05);
 }
 
-/* === Описание === */
 .product-details {
     padding: 14px;
     display: flex;
@@ -96,19 +92,18 @@ body {
 .product-price {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #cb11ab; /* фиолетовый, как у Wildberries */
+    color: #00a2ff; 
 }
 
 .product-old-price {
     text-decoration: line-through;
-    color: #aaa;
+    color: grey;
     font-size: 0.9rem;
 }
 
-/* === Кнопка === */
 .add-to-cart {
-    background-color: #cb11ab;
-    color: #fff;
+    background-color: #00a2ff;
+    color: white;
     border: none;
     border-radius: 8px;
     padding: 10px 0;
@@ -119,10 +114,9 @@ body {
 }
 
 .add-to-cart:hover {
-    background-color: #a10d8a;
+    background-color: #003cff;
 }
 
-/* === Секция брендов === */
 .section-title {
     margin-top: 60px;
     font-size: 1.6rem;
@@ -137,7 +131,7 @@ body {
 }
 
 .brand-item {
-    background: #fff;
+    background: white;
     border-radius: 10px;
     padding: 12px;
     text-align: center;
@@ -162,6 +156,19 @@ position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-  background-color: #a10d8a;
+  background-color:#003cff ;
+  color: white;
     border-radius: 5px;
+}
+footer{
+    padding: 10px;
+}
+.product-desc{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: grey;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;    
 }
